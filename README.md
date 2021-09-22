@@ -32,5 +32,6 @@ A video game with three.js
 
 **BONUS**
 
-Score displayed
-Enemies turning
+Score is displayed at the bottom
+Enemies change direction every 5 seconds
+The more enemies you kill, the faster they spawn

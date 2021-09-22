@@ -21,16 +21,17 @@ var Player = function(name, color, position, direction) {
 };
 
 Player.prototype.dead = function () {
+	alive = false;
     this.graphic.position.z = this.graphic.position.z-0.1;
 	var remaining = $('#life').html();
-	if (remaining <= 1) {
-        $("#container").html("");
-        $('#vies').html("You Lost");
-	} else {
+	if (remaining > 1) {
         //Nettoyage de la div container
         $("#container").html("");
         $('#life').html(remaining - 1);
         init();
+	} else {
+        $("#container").html("");
+        $('#vies').html("You Lost");
 	}
 }
 

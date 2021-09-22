@@ -29,10 +29,11 @@ function init()
     player1 = new Player("player1", 0xffffff, new THREE.Vector2(WIDTH/10/2, HEIGHT/10/2), 0);
     scene.add(player1.graphic);
 	
+	alive = true;
 	enemies = [];
 	lastElapsed = -1;
 	lastElapsedDir = -1;
-	timeDifficulty = 2;
+	timeDifficulty = 10;
 	
     light1 = new Light("sun", 0xffffff, "0,0,340");
     scene.add(light1);

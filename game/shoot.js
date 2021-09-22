@@ -91,8 +91,7 @@ function player_collision()
 		var y = player1.graphic.position.y;
 		var enemyx = enemy.graphic.position.x;
 		var enemyy = enemy.graphic.position.y;
-		if (enemyx < x + 10 && enemyx > x - 10 && enemyy < y + 10 && enemyy > y - 10) {
-			enemy.graphic.position.x = -3000;
+		if (alive && enemyx < x + 10 && enemyx > x - 10 && enemyy < y + 10 && enemyy > y - 10) {
 			scene.remove(enemy);
 			player1.dead();
 		}
